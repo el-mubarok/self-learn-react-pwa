@@ -1,5 +1,5 @@
 import React from 'react';
-import { BasketOutline, Cart, CartOutline } from 'react-ionicons';
+import { BasketOutline } from 'react-ionicons';
 
 const About: React.FC = () => {
   return (

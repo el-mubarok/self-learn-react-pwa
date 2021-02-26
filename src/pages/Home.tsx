@@ -3,7 +3,7 @@ import CardProduct from '../components/cards/CardProduct';
 import { GetProducts } from '../services'
 import './page.css';
 import Slider from 'react-slick';
-import { Search, SearchOutline } from 'react-ionicons';
+import { Search } from 'react-ionicons';
 
 const HomePage: React.FC = () => {
   const [d, setD] = useState([]);

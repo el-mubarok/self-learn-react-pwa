@@ -4,7 +4,7 @@ import {
   Person, PersonOutline } from 'react-ionicons';
 import { 
   BrowserRouter as Router, Switch, 
-  Route, Link, useHistory } from 'react-router-dom';
+  Route, useHistory } from 'react-router-dom';
 import './App.css';
 import './bs.css';
 import './custom.css';
@@ -52,12 +52,12 @@ const NavigationBar = () => {
         {
           menus.map((d, i) => {
             return(<li key={i}>
-              <div className={`icon p-3 m-0 ${nav == d ? "active" : ""}`} 
+              <div className={`icon p-3 m-0 ${nav === d ? "active" : ""}`} 
                 onClick={() => {
                   setNav(d);
                   history.push(menus_link[i]);
                 }}>
-                <NavIcon name={d} active={nav == d ? true : false} />
+                <NavIcon name={d} active={nav === d ? true : false} />
               </div>
             </li>)
           })
