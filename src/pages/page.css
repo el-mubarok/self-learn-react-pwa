@@ -1,0 +1,14 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
+.slick-slider.slick-initialized{
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+.slick-list{
+  padding: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.slick-initialized .slick-slide{
+  padding-right: 2rem;
+}

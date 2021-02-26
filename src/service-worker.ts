@@ -78,3 +78,13 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+self.addEventListener('push', (e) => {
+  e.waitUntil(() => {
+    console.log(e.data);
+    self.registration.showNotification("Push from the ...", { body: 'hello.' });
+  });
+});
+
+self.addEventListener('notificationclose', (e) => {
+  console.log("You just closed the notification.");
+});
