@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
           <h3 className="title m-0 h1">Discover</h3>
           <p className="subtitle m-0 h3">your products</p>
         </div>
-        <img className="avatar" src="https://randomuser.me/api/portraits/women/72.jpg" />
+        <img className="avatar" src="https://randomuser.me/api/portraits/women/72.jpg" alt="..." />
       </div>
 
       <div className="d-flex search mb-4">

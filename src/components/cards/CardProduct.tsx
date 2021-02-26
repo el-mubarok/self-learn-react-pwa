@@ -6,7 +6,7 @@ const CardProduct = (props: any) => {
   const data = props.data;
   return (
     <div className={`card-product ${className}`}>
-      <img src={`${data.image}`} alt=""/>
+      <img src={`${data.image}`} alt="..."/>
       <div>
         <small className="product-category">#{data.category}</small>
         <h1 className="product-title">{data.title}</h1>
