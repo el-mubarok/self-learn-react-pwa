@@ -46,8 +46,7 @@ const NavigationBar = () => {
   const history = useHistory();
 
   return (
-    <nav className="navigation mt-5">
-      {/* <div className="navigation-bg"></div> */}
+    <nav className="navigation">
       <ul>
         {
           menus.map((d, i) => {

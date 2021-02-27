@@ -4,8 +4,9 @@ import { PricetagOutline } from 'react-ionicons';
 const CardProduct = (props: any) => {
   const className = props.className;
   const data = props.data;
+  const style = props.cStyle;
   return (
-    <div className={`card-product ${className}`}>
+    <div className={`card-product ${className}`} style={style}>
       <img src={`${data.image}`} alt="..."/>
       <div>
         <small className="product-category">#{data.category}</small>
