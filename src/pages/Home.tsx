@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
   const [d, setD] = useState([]);
   const [p, setP] = useState([]);
   const [s, setS] = useState(false);
-  const [is, setIs] = useState(0);
+  // const [is, setIs] = useState(0);
   const [srch, setSrch] = useState(false); // search popup
 
   const slider = useRef<Slider>(null);
@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
       json => {
         setP(json);
         setS(true);
-        setIs(json.length > 2 ? Math.ceil(json.length / 2) : 0);
+        // setIs(json.length > 2 ? Math.ceil(json.length / 2) : 0);
         slider.current?.slickGoTo(Math.ceil(json.length / 2));
       }
     );
@@ -39,14 +39,14 @@ const HomePage: React.FC = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     variableWidth: true,
     arrows: false,
     draggable: s,
-    centerMode: is !== 0 ? true : false,
+    // centerMode: is !== 0 ? true : false,
   };
 
   return (
@@ -76,7 +76,7 @@ const HomePage: React.FC = () => {
       <Slider ref={slider} {...settings}>
         {
           p.length === 0 && skeleton_count.map((dat, i) => {
-            return (<Skeleton key="i" className="mb-5" cStyle={{width: "250px", height: "392px", borderRadius: "16px"}} />)
+            return (<Skeleton key={i} className="mb-5" cStyle={{width: "250px", height: "392px", borderRadius: "16px"}} />)
           })
         }
         {
@@ -92,8 +92,8 @@ const HomePage: React.FC = () => {
         {
           d.length === 0 && skeleton_count.map((dat, i) => {
             return (
-              <div className="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <Skeleton key="i" cStyle={{width: "100%", height: "392px", borderRadius: "16px"}} />
+              <div key={i} className="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <Skeleton cStyle={{width: "100%", height: "392px", borderRadius: "16px"}} />
               </div>
             )
           })
@@ -101,8 +101,8 @@ const HomePage: React.FC = () => {
         {
           d.length > 0 && d.map((dat, i) => {
             return (
-              <div className="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <CardProduct key={i} cStyle={{width: "100%", boxShadow: "var(--bx-shadow-2)"}} data={dat} />
+              <div key={i} className="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <CardProduct cStyle={{width: "100%", boxShadow: "var(--bx-shadow-2)"}} data={dat} />
               </div>
             )
           })
