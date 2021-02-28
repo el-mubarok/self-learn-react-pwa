@@ -10,7 +10,7 @@ const CardProduct = (props: any) => {
       <img src={`${data.image}`} alt="..."/>
       <div>
         <small className="product-category">#{data.category}</small>
-        <h1 className="product-title">{data.title}</h1>
+        <h1 className="product-title" title={`${data.title}`}>{data.title}</h1>
         <div className="product-price d-flex align-items-center">
           <PricetagOutline width="20px" height="20px" />
           <p className="mb-0">${data.price}</p>

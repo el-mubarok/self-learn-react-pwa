@@ -1,7 +1,7 @@
 var endpoint: string = "https://fakestoreapi.com/";
 
-const GetProducts = () => {
-  return fetch(`${endpoint}products?limit=10`)
+const GetProducts = (limit = 10) => {
+  return fetch(`${endpoint}products?limit=${limit}`)
   .then(res=>res.json());
 }
 
